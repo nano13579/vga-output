@@ -17,3 +17,19 @@ Had to create an SSH key to clone the repo into the proper directory since all i
 ## Day 2
 
 I decided to create a simple 64 bit adder and have corresponding graphical output (TBD). Instead of using Ripple Carry Adders which run sequentially (i.e. first adder calculates carry-out, second adder receives it then does calculations that include the previous carry-out then carry-out’s itself etc. etc.) Will likely use Carry Look-Ahead Adders which are slightly more complex and offer faster calculation times. The individual adders are just duplicates of each other so this process should be fairly easy.
+
+## Day 3
+
+Starting with the VGA aspect of things,
+
+- HSYNC goes through pixel data line by line horizontally. An HSYNC pulse is sent once a line is completed and the process is repeated for consecutive lines
+
+- Once HSYNC maxes, a VSYNC pulse is created, starting the next frame from the top left corner (default)
+
+- Horizontal/Vertical Retrace is the time that it takes for pulse to be sent/created and the next line/frame to start
+
+- Retrace periods = Back Porch (time before) + Front Porch (time after)
+
+- Aiming for a 640 x 480 display area (calculations for horizontal and vertical maxes will be done accordingly)
+
+TODO: find the clock speed (MHz) according to dimensions and frame speed and specs for ice40up5k
