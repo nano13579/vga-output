@@ -33,3 +33,7 @@ Starting with the VGA aspect of things,
 - Aiming for a 640 x 480 display area (calculations for horizontal and vertical maxes will be done accordingly)
 
 TODO: find the clock speed (MHz) according to dimensions and frame speed and specs for ice40up5k
+
+## Day 4
+
+Will use a 25.175 MHz clock. The standard number of horizontal pixels is 800, therefore max is 799. Total active pixels is 640 horizontally. Generally the front porch for 640 x 480 is 16 pixels and retrace is generally 96 pixels. So 800 - 640 - 16 - 96 = 48 which is the width of the horizontal back porch in pixels. Same calculations go for vertical widths only with a standard horizontal pixel width of 524 pixels and 10 pixels for front porch and 2 pixels for retrace. 
